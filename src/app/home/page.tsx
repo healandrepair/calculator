@@ -1,7 +1,7 @@
 'use client'
 
 import { text } from "stream/consumers";
-import Calculator from "../../components/Calculator";
+import Calculator from "../../../components/Calculator";
 
 
 export default function Home() {
