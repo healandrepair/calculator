@@ -9,7 +9,7 @@ export default function Home() {
       <div style={{textAlign: 'center'}}>
         <Calculator/>
         <button onClick={() => console.log("Button clicked")}>Click me!</button>
-
+        <p>Hi</p>
         
         {/* Add your content here */}
       </div>
