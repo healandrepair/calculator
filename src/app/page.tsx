@@ -27,7 +27,7 @@ export default function Home() {
         </header>
         <Calculator/>
         <button onClick={() => console.log("Button clicked")}>Click me!</button>
-        <p>Death</p>
+        <p>Calculate Please!</p>
         
         {/* Add your content here */}
       </div>
