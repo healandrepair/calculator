@@ -5,11 +5,6 @@ import './CalculatorStyles.css';
 import '../src/app/AddBootstrap';
 
 function Calculator() {
-    const plusOne = () => {
-        setValue(currentValue + 1)
-        console.log(currentValue)
-    }
-
     const handleNumberButtonClick = (value: string) => {
         var tempCurrentCalculation = currentCalculation + value
         setCurrentCalculation(tempCurrentCalculation);
@@ -37,7 +32,6 @@ function Calculator() {
 
     const [currentCalculation, setCurrentCalculation] = useState<string>("");
 
-    const [currentValue, setValue] = useState<number>(0)
     return (
         <div>
             <div>
@@ -50,7 +44,8 @@ function Calculator() {
                 <button onClick={() => handleNumberButtonClick("/")} className="btn btn-outline-secondary btn-lg btn-operation">/</button>
                 <button onClick={() => handleNumberButtonClick("-")} className="btn btn-outline-secondary btn-lg btn-operation">-</button>
                 <button onClick={() => handleNumberButtonClick("+")} className="btn btn-outline-secondary btn-lg btn-operation">+</button>
-                <button className="btn btn-outline-secondary btn-lg">blank</button>                <button onClick={() => handleNumberButtonClick("1")} className="btn btn-outline-secondary btn-lg">1</button>
+                <button onClick={() => handleNumberButtonClick("*")} className="btn btn-outline-secondary btn-lg btn-operation">*</button>                
+                <button onClick={() => handleNumberButtonClick("1")} className="btn btn-outline-secondary btn-lg">1</button>
                 <button onClick={() => handleNumberButtonClick("2")} className="btn btn-outline-secondary btn-lg">2</button>
                 <button onClick={() => handleNumberButtonClick("3")} className="btn btn-outline-secondary btn-lg">3</button>
                 <button onClick={() => handleSubmitButton()} className="btn btn-primary btn-lg">Submit</button>
@@ -62,10 +57,6 @@ function Calculator() {
                 <button onClick={() => handleNumberButtonClick("8")} className="btn btn-outline-secondary btn-lg">8</button>
                 <button onClick={() => handleNumberButtonClick("9")} className="btn btn-outline-secondary btn-lg">9</button>
                 <button onClick={() => handleClearButton()} className="btn btn-outline-secondary btn-lg">Clear</button></div>
-            <p>
-                Current value: {currentValue}
-            </p>
-            <button onClick={plusOne}>Click me!</button>
         </div>)
 }
 
